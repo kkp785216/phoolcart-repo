@@ -30,7 +30,8 @@ export const panditJis: PanditJi[] = [
     id: 1,
     slug: "pandit-rajesh-sharma",
     name: "Pandit Rajesh Sharma",
-    photo: "/elderly-indian-priest-with-tilaka-and-traditional-.jpg",
+    photo:
+      "https://img.clevup.in/452724/elderly-indian-priest-with-tilaka-and-traditional--1757415743312.jpeg",
     nativePlace: "Varanasi, Uttar Pradesh",
     experience: "25 years",
     rating: 4.8,
@@ -115,7 +116,8 @@ export const panditJis: PanditJi[] = [
     id: 2,
     slug: "pandit-suresh-mishra",
     name: "Pandit Suresh Mishra",
-    photo: "/middle-aged-indian-brahmin-priest-with-sacred-thre.jpg",
+    photo:
+      "https://img.clevup.in/452724/middle-aged-indian-brahmin-priest-with-sacred-thre-1757415744068.jpeg",
     nativePlace: "Haridwar, Uttarakhand",
     experience: "18 years",
     rating: 4.9,
@@ -179,7 +181,8 @@ export const panditJis: PanditJi[] = [
     id: 3,
     slug: "pandit-anil-pandey",
     name: "Pandit Anil Pandey",
-    photo: "/young-indian-priest-with-traditional-kurta-and-til.jpg",
+    photo:
+      "https://img.clevup.in/452724/young-indian-priest-with-traditional-kurta-and-til-1757415744765.jpeg",
     nativePlace: "Mathura, Uttar Pradesh",
     experience: "12 years",
     rating: 4.7,
@@ -243,7 +246,8 @@ export const panditJis: PanditJi[] = [
     id: 4,
     slug: "pandit-ramesh-tiwari",
     name: "Pandit Ramesh Tiwari",
-    photo: "/senior-indian-pandit-with-white-beard-and-traditio.jpg",
+    photo:
+      "https://img.clevup.in/452724/senior-indian-pandit-with-white-beard-and-traditio-1757415745766.jpeg",
     nativePlace: "Ujjain, Madhya Pradesh",
     experience: "30 years",
     rating: 4.9,
@@ -312,7 +316,8 @@ export const panditJis: PanditJi[] = [
     id: 5,
     slug: "pandit-vinod-joshi",
     name: "Pandit Vinod Joshi",
-    photo: "/middle-aged-indian-priest-with-glasses-and-traditi.jpg",
+    photo:
+      "https://img.clevup.in/452724/middle-aged-indian-priest-with-glasses-and-traditi-1757415746464.jpeg",
     nativePlace: "Pushkar, Rajasthan",
     experience: "20 years",
     rating: 4.6,
@@ -366,7 +371,8 @@ export const panditJis: PanditJi[] = [
     id: 6,
     slug: "pandit-mohan-bhatt",
     name: "Pandit Mohan Bhatt",
-    photo: "/elderly-indian-priest-with-traditional-saffron-rob.jpg",
+    photo:
+      "https://img.clevup.in/452724/elderly-indian-priest-with-traditional-saffron-rob-1757415747434.jpeg",
     nativePlace: "Rishikesh, Uttarakhand",
     experience: "35 years",
     rating: 5.0,

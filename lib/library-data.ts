@@ -1,17 +1,18 @@
 export interface LibraryItem {
-  id: string
-  title: string
-  content: string
-  youtubeId?: string
-  description?: string
+  id: string;
+  title: string;
+  content: string;
+  image: string;
+  youtubeId?: string;
+  description?: string;
 }
 
 export interface LibraryCategory {
-  id: string
-  name: string
-  description: string
-  icon: string
-  items: LibraryItem[]
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  items: LibraryItem[];
 }
 
 export const libraryData: LibraryCategory[] = [
@@ -25,6 +26,8 @@ export const libraryData: LibraryCategory[] = [
         id: "hanuman-chalisa",
         title: "Hanuman Chalisa",
         description: "The most popular chalisa dedicated to Lord Hanuman",
+        image:
+          "https://img.clevup.in/452724/11TH_Rudra_Shiva_Hanuman_cropped-1757499611741.jpeg",
         youtubeId: "YQS6a5vwF5s",
         content: `श्री गुरु चरन सरोज रज, निज मनु मुकुरु सुधारि।
 बरनउं रघुबर बिमल जसु, जो दायकु फल चारि॥
@@ -163,6 +166,8 @@ export const libraryData: LibraryCategory[] = [
         id: "shiv-chalisa",
         title: "Shiv Chalisa",
         description: "Sacred hymn dedicated to Lord Shiva",
+        image:
+          "https://img.clevup.in/452724/large-lord-shiva-poster-shiv-bhagwan-poster-mahadev-poster-shiv-original-imag3hwjhnbgw6zm-1757499809987.webp",
         youtubeId: "dQw4w9WgXcQ",
         content: `जय गणेश गिरिजा सुवन, मंगल मूल सुजान।
 कहत अयोध्यादास तुम, देहु अभय वरदान॥
@@ -239,6 +244,8 @@ export const libraryData: LibraryCategory[] = [
       {
         id: "durga-chalisa",
         title: "Durga Chalisa",
+        image:
+          "https://img.clevup.in/452724/durga-mata-colorful-background-digital-600nw-1857132805-1757499846667.webp",
         description: "Sacred hymn dedicated to Goddess Durga",
         youtubeId: "dQw4w9WgXcQ",
         content: `नमो नमो दुर्गे सुख करनी। नमो नमो अम्बे दुःख हरनी॥
@@ -318,6 +325,8 @@ export const libraryData: LibraryCategory[] = [
       {
         id: "ganga-aarti",
         title: "Ganga Aarti",
+        image:
+          "https://img.clevup.in/452724/Untitled-design-2-1757500065086.png",
         description: "Evening aarti performed at the banks of River Ganga",
         youtubeId: "dQw4w9WgXcQ",
         content: `ॐ जय गंगे माता, मैया जय गंगे माता।
@@ -341,6 +350,8 @@ export const libraryData: LibraryCategory[] = [
       {
         id: "om-jai-jagdish-hare",
         title: "Om Jai Jagdish Hare",
+        image:
+          "https://img.clevup.in/452724/Laxmipati-Vishnu-Bhagwan-Images_1-1757500065995.jpeg",
         description: "Universal aarti dedicated to the Supreme Lord",
         youtubeId: "dQw4w9WgXcQ",
         content: `ॐ जय जगदीश हरे, स्वामी जय जगदीश हरे।
@@ -404,6 +415,8 @@ export const libraryData: LibraryCategory[] = [
       {
         id: "vishnu-stuti",
         title: "Vishnu Stuti",
+        image:
+          "https://img.clevup.in/452724/Laxmipati-Vishnu-Bhagwan-Images_1-1757500065995.jpeg",
         description: "Hymn of praise dedicated to Lord Vishnu",
         youtubeId: "dQw4w9WgXcQ",
         content: `शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं
@@ -448,7 +461,10 @@ export const libraryData: LibraryCategory[] = [
       {
         id: "sundarkand-path",
         title: "Sundarkand Path",
-        description: "The fifth chapter of Ramcharitmanas describing Hanuman's journey to Lanka",
+        image:
+          "https://img.clevup.in/452724/crop_480x480_1588154606_3128025-1757500233862.webp",
+        description:
+          "The fifth chapter of Ramcharitmanas describing Hanuman's journey to Lanka",
         youtubeId: "dQw4w9WgXcQ",
         content: `श्रीगणेशायनमः। श्रीजानकीवल्लभो विजयते।
 श्रीरामचरितमानस। पञ्चम सोपान। सुन्दरकाण्ड।
@@ -494,13 +510,18 @@ export const libraryData: LibraryCategory[] = [
       },
     ],
   },
-]
+];
 
-export function getCategoryById(categoryId: string): LibraryCategory | undefined {
-  return libraryData.find((category) => category.id === categoryId)
+export function getCategoryById(
+  categoryId: string
+): LibraryCategory | undefined {
+  return libraryData.find((category) => category.id === categoryId);
 }
 
-export function getItemById(categoryId: string, itemId: string): LibraryItem | undefined {
-  const category = getCategoryById(categoryId)
-  return category?.items.find((item) => item.id === itemId)
+export function getItemById(
+  categoryId: string,
+  itemId: string
+): LibraryItem | undefined {
+  const category = getCategoryById(categoryId);
+  return category?.items.find((item) => item.id === itemId);
 }

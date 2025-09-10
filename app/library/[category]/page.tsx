@@ -80,8 +80,15 @@ export default function CategoryPage({ params }: CategoryPageProps) {
               className="hover:shadow-lg transition-all duration-300 border-border group hover:border-primary/30"
             >
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between relative">
                   <div className="flex-1">
+                    <div className="text-6xl mb-4 group-hover:scale-105 transition-transform duration-300">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="rounded-lg mx-auto w-full"
+                      />
+                    </div>
                     <CardTitle className="text-lg text-foreground group-hover:text-primary transition-colors text-balance">
                       {item.title}
                     </CardTitle>
@@ -91,8 +98,8 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                       </CardDescription>
                     )}
                   </div>
-                  <div className="ml-4">
-                    <BookOpen className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <div className="ml-4 absolute top-4 right-4">
+                    <BookOpen className="w-6 h-6  text-white transition-colors" />
                   </div>
                 </div>
               </CardHeader>

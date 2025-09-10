@@ -74,7 +74,6 @@ export default function LibraryPage() {
                   {category.description}
                 </CardDescription>
               </CardHeader>
-
               <CardContent className="pt-0">
                 <div className="mb-4">
                   <p className="text-sm text-muted-foreground">

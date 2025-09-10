@@ -84,7 +84,7 @@ export default function PanditListingPage() {
                   <img
                     src={pandit.photo || "/placeholder.svg"}
                     alt={`${pandit.name} - Pandit Ji`}
-                    className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-primary/20"
+                    className="w-32 h-32 rounded-full object-cover mx-auto border-4 border-primary/20"
                   />
                 </div>
                 <CardTitle className="text-xl text-foreground">
@@ -165,13 +165,15 @@ export default function PanditListingPage() {
                       View Profile
                     </Button>
                   </Link>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="px-3 bg-transparent"
-                  >
-                    <Phone className="w-4 h-4" />
-                  </Button>
+                  <a href={`tel:${pandit.contactNumber}`} className="block">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="px-3 bg-transparent hover:text-white"
+                    >
+                      <Phone className="w-4 h-4" />
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -202,7 +204,11 @@ export default function PanditListingPage() {
                 </Button>
               </Link>
               <Link href="/library/chalisas">
-                <Button variant="outline" size="lg" className="bg-transparent">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-transparent hover:text-white"
+                >
                   Start with Chalisas
                 </Button>
               </Link>
