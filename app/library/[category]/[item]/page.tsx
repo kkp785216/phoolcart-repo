@@ -250,22 +250,6 @@ export default function ItemPage({ params }: ItemPageProps) {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-card border-t border-border mt-16">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center text-muted-foreground">
-            <p className="mb-2">
-              May this sacred recitation bring you peace and spiritual
-              fulfillment
-            </p>
-            <p className="text-sm">
-              "मन्त्रहीनं क्रियाहीनं भक्तिहीनं सुरेश्वर" - Without devotion, all
-              practices are incomplete
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

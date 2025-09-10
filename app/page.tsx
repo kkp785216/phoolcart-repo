@@ -227,20 +227,6 @@ export default function PanditListingPage() {
           </Button>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-card border-t border-border mt-16">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center text-muted-foreground">
-            <p className="mb-2">
-              🕉️ Connecting devotees with experienced Pandit Jis 🕉️
-            </p>
-            <p className="text-sm">
-              "धर्मो रक्षति रक्षितः" - Dharma protects those who protect it
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

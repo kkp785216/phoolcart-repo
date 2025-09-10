@@ -168,20 +168,6 @@ export default function LibraryPage() {
           </Link>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-card border-t border-border mt-16">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center text-muted-foreground">
-            <p className="mb-2">
-              Sacred texts for spiritual enlightenment and devotion
-            </p>
-            <p className="text-sm">
-              "विद्या ददाति विनयं" - Knowledge bestows humility
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
