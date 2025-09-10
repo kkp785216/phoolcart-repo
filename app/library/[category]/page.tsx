@@ -1,22 +1,28 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, BookOpen, Play, Clock } from "lucide-react"
-import Link from "next/link"
-import { getCategoryById } from "@/lib/library-data"
-import { notFound } from "next/navigation"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowLeft, BookOpen, Play, Clock } from "lucide-react";
+import Link from "next/link";
+import { getCategoryById } from "@/lib/library-data";
+import { notFound } from "next/navigation";
 
 interface CategoryPageProps {
   params: {
-    category: string
-  }
+    category: string;
+  };
 }
 
 export default function CategoryPage({ params }: CategoryPageProps) {
-  const category = getCategoryById(params.category)
+  const category = getCategoryById(params.category);
 
   if (!category) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -39,10 +45,15 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           <div className="flex items-center gap-4">
             <div className="text-5xl">{category.icon}</div>
             <div>
-              <h1 className="text-3xl font-bold text-balance">{category.name}</h1>
-              <p className="text-lg opacity-90 text-pretty">{category.description}</p>
+              <h1 className="text-3xl font-bold text-balance">
+                {category.name}
+              </h1>
+              <p className="text-lg opacity-90 text-pretty">
+                {category.description}
+              </p>
               <p className="text-sm opacity-75 mt-1">
-                {category.items.length} {category.items.length === 1 ? "item" : "items"} available
+                {category.items.length}{" "}
+                {category.items.length === 1 ? "item" : "items"} available
               </p>
             </div>
           </div>
@@ -52,9 +63,12 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-foreground mb-2">Available {category.name}</h2>
+          <h2 className="text-2xl font-semibold text-foreground mb-2">
+            Available {category.name}
+          </h2>
           <p className="text-muted-foreground">
-            Click on any item to read the complete text and listen to audio recitations.
+            Click on any item to read the complete text and listen to audio
+            recitations.
           </p>
         </div>
 
@@ -72,7 +86,9 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                       {item.title}
                     </CardTitle>
                     {item.description && (
-                      <CardDescription className="mt-2 text-pretty">{item.description}</CardDescription>
+                      <CardDescription className="mt-2 text-pretty">
+                        {item.description}
+                      </CardDescription>
                     )}
                   </div>
                   <div className="ml-4">
@@ -84,7 +100,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
               <CardContent className="space-y-4">
                 {/* Features */}
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="text-xs">
+                  <Badge variant="secondary" className="text-xs text-white">
                     <BookOpen className="w-3 h-3 mr-1" />
                     Full Text
                   </Badge>
@@ -112,7 +128,10 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 </div>
 
                 {/* Action Button */}
-                <Link href={`/library/${params.category}/${item.id}`} className="block">
+                <Link
+                  href={`/library/${params.category}/${item.id}`}
+                  className="block"
+                >
                   <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     Read {item.title}
                     <BookOpen className="w-4 h-4 ml-2" />
@@ -127,9 +146,12 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         {category.items.length === 0 && (
           <div className="text-center py-16">
             <div className="text-6xl mb-4">{category.icon}</div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">No {category.name} Available</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-2">
+              No {category.name} Available
+            </h3>
             <p className="text-muted-foreground mb-6">
-              We're working on adding more content to this category. Please check back soon.
+              We're working on adding more content to this category. Please
+              check back soon.
             </p>
             <Link href="/library">
               <Button variant="outline">
@@ -144,10 +166,13 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         {category.items.length > 0 && (
           <div className="mt-16 bg-muted rounded-lg p-8">
             <div className="text-center">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">About {category.name}</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">
+                About {category.name}
+              </h3>
               <p className="text-muted-foreground text-pretty max-w-2xl mx-auto mb-6">
-                {category.description}. Each text includes the complete original content with optional audio support for
-                enhanced spiritual practice and proper pronunciation.
+                {category.description}. Each text includes the complete original
+                content with optional audio support for enhanced spiritual
+                practice and proper pronunciation.
               </p>
               <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
@@ -173,10 +198,12 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-muted-foreground">
             <p className="mb-2">Explore the sacred wisdom of {category.name}</p>
-            <p className="text-sm">"श्रद्धावान् लभते ज्ञानम्" - The faithful attain knowledge</p>
+            <p className="text-sm">
+              "श्रद्धावान् लभते ज्ञानम्" - The faithful attain knowledge
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
